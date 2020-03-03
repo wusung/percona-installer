@@ -1,2 +1,0 @@
-# certbot installer bash scripts
-

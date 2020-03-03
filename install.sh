@@ -4,7 +4,9 @@ apt install -y gnupg2 libjemalloc1; \
     cd /tmp; \
     wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb;  \
     dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb; \
-    apt update; apt install -y percona-server-server-8; \
+    percona-release setup ps80; \
+    apt update; \
+    apt-get install -y percona-server-server; \
     #service mysql stop; chmod 755 /var/lib/mysql;  \
     #cd /var/lib/mysql; sudo rm ib*; \
     #sudo chmod 750 /var/lib/mysql; \
